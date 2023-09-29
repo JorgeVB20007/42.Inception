@@ -1,20 +1,23 @@
-FROM debian:bullseye
+FROM debian:buster
 
 RUN apt update -y && \
     apt upgrade -y && \
-    apt-get install mariadb-server -y
+    apt install vim -y && \
+    apt install mariadb-server -y
 
-RUN mkdir /var/run/mysqld && chown -R mysql:mysql /var/run/mysqld
+# RUN mkdir /var/run/mysqld && chown -R mysql:mysql /var/run/mysqld
 
-COPY conf/mariadb.conf	/etc/mysql/mariadb.conf.d/50-server.cnf
+COPY conf/mariadb2.conf	/etc/mysql/mariadb.conf.d/50-server.cnf
 #RUN rm -f /etc/mysql/my.cnf
 #COPY conf/mariadb.conf	/etc/mysql/my.cnf
 #RUN chmod 755 /etc/mysql/my.cnf
 COPY tools/createdb.sh createdb.sh
 RUN chmod 755 createdb.sh
 
+CMD [ "/createdb.sh" ]
+
 # ENTRYPOINT [ "/createdb.sh" ]
-CMD [ "bash" , "/createdb.sh" ]
+# CMD [ "bash" , "/createdb.sh" ]
 
 
 # COPY conf/mariadb.conf	/etc/mysql/mariadb.conf
