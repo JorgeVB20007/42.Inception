@@ -49,10 +49,10 @@ services:
       mariadb:
         condition: service_healthy
     restart: on-failure
-    # expose: 
-    #   - "9000"
-    ports:
-    - 9001:9001
+    expose: 
+      - "9000"
+    # ports:
+    # - 9001:9001
 
   adminer:
     image: adminer
@@ -72,8 +72,8 @@ services:
       - portainer:/data
     restart: unless-stopped
     ports:
-      - 9000:9000 # http
-      # - 9443:9443 # https
+      # - 9000:9000 # http
+      - 9443:9443 # https
 
 volumes:
   wordpress:

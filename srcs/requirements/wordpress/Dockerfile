@@ -16,10 +16,11 @@ RUN apt-get -y update && apt-get -y upgrade && apt update -y && apt upgrade -y
 #RUN rm /etc/php/7.3/fpm/pool.d/www.conf
 RUN apt install php-fpm php-mysql -y&& apt install curl -y
 
-COPY tools/autoconfig2.sh /autoconfig2.sh
-RUN chmod 755 /autoconfig2.sh
+COPY conf/wp-config.php /wp-config.php
+COPY tools/autoconfig.sh /autoconfig.sh
+RUN chmod 755 /autoconfig.sh
 
-CMD [ "/autoconfig2.sh" ]
+CMD [ "/autoconfig.sh" ]
 
 #COPY conf/www.conf /etc/php/7.3/fpm/pool.d/www.conf
 
