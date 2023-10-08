@@ -12,9 +12,9 @@ RUN chmod 755 /var/www/html/index.nginx-debian.html
 RUN chown -R www-data:www-data /var/www/html
 
 # COPY conf/nginx.conf /etc/nginx/nginx.conf
-COPY conf/nginx.conf /etc/nginx/sites-available/default
-RUN chmod 755 /etc/nginx/sites-available/default
-
+#COPY conf/nginx.conf /etc/nginx/sites-available/default
+COPY conf/nginx.conf /etc/nginx/conf.d/default.conf
+RUN chmod 755 /etc/nginx/conf.d/default.conf
 CMD [ "nginx", "-g", "daemon off;" ]
 
 
