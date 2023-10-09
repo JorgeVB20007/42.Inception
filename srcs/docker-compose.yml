@@ -51,8 +51,6 @@ services:
     restart: on-failure
     expose: 
       - "9000"
-    # ports:
-   #   - 9001:9001
 
   # adminer:
   #   image: adminer
@@ -83,7 +81,7 @@ volumes:
     driver_opts:
       type: 'none'
       o: 'bind'
-      device: '/Users/jvacaris/data/wordpress'
+      device: '/home/jvacaris/data/wordpress'
 
   # portainer:
   #   name: portainer
@@ -99,7 +97,7 @@ volumes:
     driver_opts:
       type: 'none' 
       o: 'bind'
-      device: '/Users/jvacaris/data/mariadb'
+      device: '/home/jvacaris/data/mariadb'
 
 networks:
   inception:
