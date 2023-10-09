@@ -6,13 +6,13 @@
 #    By: jvacaris <jvacaris@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/02 19:09:08 by jvacaris          #+#    #+#              #
-#    Updated: 2023/10/02 19:15:02 by jvacaris         ###   ########.fr        #
+#    Updated: 2023/10/09 16:25:07 by jvacaris         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 all:
-	@echo "up in progress..."
-	@docker-compose -f srcs/docker-compose.yml up
+	@echo "up with --build flag in progress..."
+	@docker-compose -f srcs/docker-compose.yml up --build
 
 up:
 	@echo "up in progress..."
@@ -32,8 +32,10 @@ prune:
 
 volreset:
 	@echo "Deleting the content of the mariadb and wordpress volumes"
-	@rm -rf ../data/mariadb/*
-	@rm -rf ../data/wordpress/*
+	@rm -rf ~/data/mariadb
+	@rm -rf ~/data/wordpress
+	@mkdir ~/data/mariadb
+	@mkdir ~/data/wordpress
 
 
 
