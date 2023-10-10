@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#echo go to sleep...
-#sleep infinity
 
 if test ! -f MYSQL_INSTALLED; then
 	echo Installing...

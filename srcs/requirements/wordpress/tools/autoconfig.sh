@@ -16,10 +16,10 @@ wp core download --allow-root
 
 mv /wp-config.php /var/www/html/wp-config.php
 
-#! Bring back later
-#wp core install --url="jvacaris.42.fr"/ --title="Hey look, a title" --admin_user=$WP_ADMIN_NAME --admin_password=$WP_ADMIN_PASSWORD --admin_email=$WP_ADMIN_NAME@student.42madrid.com --skip-email --allow-root
-#! Delete later
-wp core install --url="localhost"/ --title="Hey look, a title" --admin_user=$WP_ADMIN_NAME --admin_password=$WP_ADMIN_PASSWORD --admin_email=$WP_ADMIN_NAME@student.42madrid.com --skip-email --allow-root
+#! Version for VM
+wp core install --url="jvacaris.42.fr"/ --title="Hey look, a title" --admin_user=$WP_ADMIN_NAME --admin_password=$WP_ADMIN_PASSWORD --admin_email=$WP_ADMIN_NAME@student.42madrid.com --skip-email --allow-root
+#! Versiion for Mac
+#wp core install --url="localhost"/ --title="Hey look, a title" --admin_user=$WP_ADMIN_NAME --admin_password=$WP_ADMIN_PASSWORD --admin_email=$WP_ADMIN_NAME@student.42madrid.com --skip-email --allow-root
 
 wp user create $WP_PEASANT_NAME $WP_PEASANT_NAME@student.42madrid.com --role=author --user_pass=$WP_PEASANT_PASSWORD --allow-root
 
