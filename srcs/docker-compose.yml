@@ -92,12 +92,12 @@ volumes:
   #     device: '/Users/jvacaris/data/portainer'
 
   mariadb_data:
-    # name: mariadb
+    name: mariadb_data
     driver: local
     driver_opts:
       type: 'none' 
       o: 'bind'
-      device: '/home/jvacaris/data/mariadb'
+      device: '/home/jvacaris/data/mariadb_data'
 
 networks:
   inception:
