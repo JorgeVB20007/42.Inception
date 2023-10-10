@@ -89,7 +89,7 @@ volumes:
   #   driver_opts:
   #     type: 'none'
   #     o: 'bind'
-  #     device: '/Users/jvacaris/data/portainer'
+  #     device: '/home/jvacaris/data/portainer'
 
   mariadb:
     name: mariadb
