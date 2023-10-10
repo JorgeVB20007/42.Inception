@@ -6,7 +6,7 @@
 #    By: jvacaris <jvacaris@student.42madrid.com>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/02 19:09:08 by jvacaris          #+#    #+#              #
-#    Updated: 2023/10/09 16:25:07 by jvacaris         ###   ########.fr        #
+#    Updated: 2023/10/10 12:29:35 by jvacaris         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,10 +32,10 @@ prune:
 
 volreset:
 	@echo "Deleting the content of the mariadb and wordpress volumes"
-	@rm -rf ~/data/mariadb
-	@rm -rf ~/data/wordpress
-	@mkdir ~/data/mariadb
-	@mkdir ~/data/wordpress
+	@rm -rf /home/jvacaris/data/mariadb
+	@rm -rf /home/jvacaris/wordpress
+	@mkdir /home/jvacaris/mariadb
+	@mkdir /home/jvacaris/wordpress
 
 
 
